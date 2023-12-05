@@ -596,7 +596,7 @@ document.write(`
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_model.elements.Element">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_model.elements.</span></span><span class="sig-name descname"><span class="pre">Element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry_simplified</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insertion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.data.Data.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
 <p>Class representing a structural object of an assembly.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -607,16 +607,16 @@ to be consistent majority of names are stored in ELEMENT_NAME class</p>
 <dt><strong>id</strong><span class="classifier">list[int] or int</span></dt><dd><p>unique identifier/s , e.g.,0 or [0] or [0, 1] or [1, 5, 9].
 one object can have an index and belong to a group/s</p>
 </dd>
-<dt><strong>frame</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></span></dt><dd><p>local frame of the element
+<dt><strong>frame</strong><span class="classifier"><a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.geometry.Frame.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></a></span></dt><dd><p>local frame of the element
 there is also a global frame stored as an attribute</p>
 </dd>
-<dt><strong>geometry_simplified</strong><span class="classifier">list[<code class="xref py py-class docutils literal notranslate"><span class="pre">Polyline</span></code>]</span></dt><dd><p>minimal geometrical represetation of an object
+<dt><strong>geometry_simplified</strong><span class="classifier">list[<a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.geometry.Polyline.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polyline</span></code></a>]</span></dt><dd><p>minimal geometrical represetation of an object
 type is a polyline since it can represent: a point, a line or a polyline</p>
 </dd>
 <dt><strong>geometry</strong><span class="classifier">list[any]</span></dt><dd><p>a list of geometries used for the element visualization
 currently supported types: <code class="xref py py-class docutils literal notranslate"><span class="pre">geometry</span></code> or <code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code></p>
 </dd>
-<dt><strong>insertion</strong><span class="classifier">list[<code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code>, int]</span></dt><dd><p>direction of the element, often defined by a single vector (can be also a sequence)
+<dt><strong>insertion</strong><span class="classifier">list[<a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.geometry.Vector.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Vector</span></code></a>, int]</span></dt><dd><p>direction of the element, often defined by a single vector (can be also a sequence)
 and an index in an insertion sequence</p>
 </dd>
 <dt><strong>kwargs (dict, optional):</strong></dt><dd><p>additional keyword arguments can be passed to the element.</p>
@@ -631,11 +631,11 @@ and an index in an insertion sequence</p>
 <dl class="field-list">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">frame_global</span></code><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></span></dt><dd><p>Frame that gives orientation of the element in the larger group of Elements</p>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">frame_global</span></code><span class="classifier"><a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.geometry.Frame.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></a></span></dt><dd><p>Frame that gives orientation of the element in the larger group of Elements</p>
 </dd>
-<dt><a class="reference internal" href="compas_model.elements.Element.aabb.html#compas_model.elements.Element.aabb" title="compas_model.elements.Element.aabb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aabb</span></code></a><span class="classifier">list[<code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code>]:</span></dt><dd><p>Compute bounding box based on geometry geometries points</p>
+<dt><a class="reference internal" href="compas_model.elements.Element.aabb.html#compas_model.elements.Element.aabb" title="compas_model.elements.Element.aabb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aabb</span></code></a><span class="classifier">list[<a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.geometry.Point.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></a>]:</span></dt><dd><p>Compute bounding box based on geometry geometries points</p>
 </dd>
-<dt><a class="reference internal" href="compas_model.elements.Element.oobb.html#compas_model.elements.Element.oobb" title="compas_model.elements.Element.oobb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oobb</span></code></a><span class="classifier">list[<code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code>]:</span></dt><dd><p>Compute the oriented bounding box based on geometry geometries points</p>
+<dt><a class="reference internal" href="compas_model.elements.Element.oobb.html#compas_model.elements.Element.oobb" title="compas_model.elements.Element.oobb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oobb</span></code></a><span class="classifier">list[<a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.geometry.Point.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></a>]:</span></dt><dd><p>Compute the oriented bounding box based on geometry geometries points</p>
 </dd>
 <dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">convex_hull</span></code><span class="classifier">list[<code class="xref py py-class docutils literal notranslate"><span class="pre">Mesh</span></code>]:</span></dt><dd><p>Compute convex hull from geometry points</p>
 </dd>
