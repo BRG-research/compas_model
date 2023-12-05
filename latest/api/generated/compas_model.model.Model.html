@@ -62,8 +62,8 @@
     <link rel="shortcut icon" href="../../_static/compas.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="TreeUtils" href="compas_model.model.TreeUtils.html" />
-    <link rel="prev" title="ElementTree" href="compas_model.model.ElementTree.html" />
+    <link rel="next" title="Model.ToString" href="compas_model.model.Model.ToString.html" />
+    <link rel="prev" title="ElementTree.validate_data" href="compas_model.model.ElementTree.validate_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -512,7 +512,6 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="compas_model.model.GroupNode.html">GroupNode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compas_model.model.ElementTree.html">ElementTree</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.TreeUtils.html">TreeUtils</a></li>
 </ul>
 </li>
 </ul>
@@ -595,12 +594,51 @@ document.write(`
 <h1>Model</h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_model.model.Model">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_model.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_model.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'model'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.data.Data.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></p>
 <p>model represents:</p>
 <p>a dictionary of elements, where the key is the element.guid</p>
 <p>a tree to represent the assembly hierarchy</p>
 <p>a graph to represent the connectivity of the elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str, optional</span></dt><dd><p>A name or identifier for the model.</p>
+</dd>
+<dt><strong>elements</strong><span class="classifier">list, optional</span></dt><dd><p>A list of elements to be added to the model.</p>
+</dd>
+<dt><strong>copy_elements</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, the elements are copied before adding to the model.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Inherited Methods</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.Model.ToString.html#compas_model.model.Model.ToString" title="compas_model.model.Model.ToString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ToString</span></code></a></p></td>
+<td><p>Converts the instance to a string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.Model.copy.html#compas_model.model.Model.copy" title="compas_model.model.Model.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a></p></td>
+<td><p>Make an independent copy of the data object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.Model.from_data.html#compas_model.model.Model.from_data" title="compas_model.model.Model.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_data</span></code></a></p></td>
+<td><p>Construct an object of this type from the provided data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.Model.sha256.html#compas_model.model.Model.sha256" title="compas_model.model.Model.sha256"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sha256</span></code></a></p></td>
+<td><p>Compute a hash of the data for comparison during version control using the sha256 algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.Model.to_data.html#compas_model.model.Model.to_data" title="compas_model.model.Model.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a></p></td>
+<td><p>Convert an object to its native data representation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.Model.validate_data.html#compas_model.model.Model.validate_data" title="compas_model.model.Model.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a></p></td>
+<td><p>Validate the data against the object's data schema.</p></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </section>
@@ -617,20 +655,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="compas_model.model.ElementTree.html"
+       href="compas_model.model.ElementTree.validate_data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ElementTree</p>
+        <p class="prev-next-title">ElementTree.validate_data</p>
       </div>
     </a>
     <a class="right-next"
-       href="compas_model.model.TreeUtils.html"
+       href="compas_model.model.Model.ToString.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TreeUtils</p>
+        <p class="prev-next-title">Model.ToString</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

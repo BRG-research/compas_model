@@ -62,8 +62,8 @@
     <link rel="shortcut icon" href="../../_static/compas.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ElementTree" href="compas_model.model.ElementTree.html" />
-    <link rel="prev" title="ElementNode" href="compas_model.model.ElementNode.html" />
+    <link rel="next" title="GroupNode.ToString" href="compas_model.model.GroupNode.ToString.html" />
+    <link rel="prev" title="ElementNode.validate_data" href="compas_model.model.ElementNode.validate_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -512,7 +512,6 @@ document.write(`
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">GroupNode</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compas_model.model.ElementTree.html">ElementTree</a></li>
 <li class="toctree-l3"><a class="reference internal" href="compas_model.model.Model.html">Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.TreeUtils.html">TreeUtils</a></li>
 </ul>
 </li>
 </ul>
@@ -595,9 +594,67 @@ document.write(`
 <h1>GroupNode</h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="compas_model.model.GroupNode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_model.model.</span></span><span class="sig-name descname"><span class="pre">GroupNode</span></span></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>a group node that is represented by a name and a geometry and a list of children</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">compas_model.model.</span></span><span class="sig-name descname"><span class="pre">GroupNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.datastructures.TreeNode.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code></a></p>
+<p>A group node that is represented by a name and a geometry and a list of children</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str, optional</span></dt><dd><p>A name or identifier for the node.</p>
+</dd>
+<dt><strong>geometry</strong><span class="classifier">Any, optional</span></dt><dd><p>Geometry or any other property, when you want to give a group a shape besides name.</p>
+</dd>
+<dt><strong>attributes</strong><span class="classifier">dict, optional</span></dt><dd><p>A dictionary of additional attributes to be associated with the node.</p>
+</dd>
+<dt><strong>parent</strong><span class="classifier">Node, optional</span></dt><dd><p>The parent node of this node.
+This input is required when the node is created separately (not by tree.add_group(…))
+After creation, the parent becomes the branch or sub-branch of the node.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>geometry</strong><span class="classifier">Geometry, read-only</span></dt><dd><p>The geometry of the node, if it is assigned.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Inherited Methods</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.GroupNode.ToString.html#compas_model.model.GroupNode.ToString" title="compas_model.model.GroupNode.ToString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ToString</span></code></a></p></td>
+<td><p>Converts the instance to a string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.GroupNode.add.html#compas_model.model.GroupNode.add" title="compas_model.model.GroupNode.add"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add</span></code></a></p></td>
+<td><p>Add a child node to this node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.GroupNode.copy.html#compas_model.model.GroupNode.copy" title="compas_model.model.GroupNode.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a></p></td>
+<td><p>Make an independent copy of the data object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.GroupNode.from_data.html#compas_model.model.GroupNode.from_data" title="compas_model.model.GroupNode.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_data</span></code></a></p></td>
+<td><p>Construct an object of this type from the provided data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.GroupNode.remove.html#compas_model.model.GroupNode.remove" title="compas_model.model.GroupNode.remove"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove</span></code></a></p></td>
+<td><p>Remove a child node from this node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.GroupNode.sha256.html#compas_model.model.GroupNode.sha256" title="compas_model.model.GroupNode.sha256"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sha256</span></code></a></p></td>
+<td><p>Compute a hash of the data for comparison during version control using the sha256 algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.GroupNode.to_data.html#compas_model.model.GroupNode.to_data" title="compas_model.model.GroupNode.to_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_data</span></code></a></p></td>
+<td><p>Convert an object to its native data representation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="compas_model.model.GroupNode.traverse.html#compas_model.model.GroupNode.traverse" title="compas_model.model.GroupNode.traverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traverse</span></code></a></p></td>
+<td><p>Traverse the tree from this node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="compas_model.model.GroupNode.validate_data.html#compas_model.model.GroupNode.validate_data" title="compas_model.model.GroupNode.validate_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_data</span></code></a></p></td>
+<td><p>Validate the data against the object's data schema.</p></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </section>
@@ -614,20 +671,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="compas_model.model.ElementNode.html"
+       href="compas_model.model.ElementNode.validate_data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ElementNode</p>
+        <p class="prev-next-title">ElementNode.validate_data</p>
       </div>
     </a>
     <a class="right-next"
-       href="compas_model.model.ElementTree.html"
+       href="compas_model.model.GroupNode.ToString.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ElementTree</p>
+        <p class="prev-next-title">GroupNode.ToString</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
