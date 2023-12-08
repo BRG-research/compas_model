@@ -62,8 +62,8 @@
     <link rel="shortcut icon" href="../../_static/compas.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Element.frame_to_face" href="compas_model.elements.Element.frame_to_face.html" />
-    <link rel="prev" title="Element.axis_to_axis" href="compas_model.elements.Element.axis_to_axis.html" />
+    <link rel="next" title="Element.from_block" href="compas_model.elements.Element.from_block.html" />
+    <link rel="prev" title="Element.aabb_center" href="compas_model.elements.Element.aabb_center.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -503,17 +503,6 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="../compas_model.model.html">compas_model.model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../compas_model.elements.html">compas_model.elements</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="reference internal" href="compas_model.elements.Element.html">Element</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../compas_model.model.html">compas_model.model</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.ElementNode.html">ElementNode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.GroupNode.html">GroupNode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.ElementTree.html">ElementTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.Model.html">Model</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../devguide.html">Development Guide</a></li>
@@ -595,22 +584,7 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="compas_model.elements.Element.copy">
 <span class="sig-prename descclassname"><span class="pre">Element.</span></span><span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
-<dd><p>Make an independent copy of the data object.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>cls</strong><span class="classifier">Type[<a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.data.Data.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a>], optional</span></dt><dd><p>The type of data object to return.
-Defaults to the type of the current data object.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.data.Data.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code></a></dt><dd><p>An independent copy of this object.</p>
-</dd>
-</dl>
-</dd>
-</dl>
+<dd><p>Makes an independent copy of all properties of this class.</p>
 </dd></dl>
 
 </section>
@@ -627,20 +601,20 @@ Defaults to the type of the current data object.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="compas_model.elements.Element.axis_to_axis.html"
+       href="compas_model.elements.Element.aabb_center.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Element.axis_to_axis</p>
+        <p class="prev-next-title">Element.aabb_center</p>
       </div>
     </a>
     <a class="right-next"
-       href="compas_model.elements.Element.frame_to_face.html"
+       href="compas_model.elements.Element.from_block.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Element.frame_to_face</p>
+        <p class="prev-next-title">Element.from_block</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

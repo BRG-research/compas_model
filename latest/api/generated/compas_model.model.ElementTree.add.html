@@ -503,17 +503,6 @@ document.write(`
 <li class="toctree-l3 current active"><a class="reference internal" href="../compas_model.model.html">compas_model.model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../compas_model.elements.html">compas_model.elements</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.elements.Element.html">Element</a></li>
-</ul>
-</li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../compas_model.model.html">compas_model.model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.ElementNode.html">ElementNode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.GroupNode.html">GroupNode</a></li>
-<li class="toctree-l3 current active"><a class="reference internal" href="compas_model.model.ElementTree.html">ElementTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="compas_model.model.Model.html">Model</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../devguide.html">Development Guide</a></li>
@@ -599,9 +588,9 @@ document.write(`
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>node</strong><span class="classifier"><a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.datastructures.TreeNode.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code></a></span></dt><dd><p>The node to add.</p>
+<dt><strong>node</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code></span></dt><dd><p>The node to add.</p>
 </dd>
-<dt><strong>parent</strong><span class="classifier"><a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.datastructures.TreeNode.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code></a>, optional</span></dt><dd><p>The parent node of the node to add.
+<dt><strong>parent</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code>, optional</span></dt><dd><p>The parent node of the node to add.
 Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case the node is added as a root node.</p>
 </dd>
 </dl>
@@ -613,8 +602,8 @@ Default is <code class="docutils literal notranslate"><span class="pre">None</sp
 </dd>
 <dt class="field-odd">Raises</dt>
 <dd class="field-odd"><dl class="simple">
-<dt>TypeError</dt><dd><p>If the node is not a <a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.datastructures.TreeNode.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code></a> object.
-If the supplied parent node is not a <a class="reference external" href="https://compas.dev/compas/latest/reference/generated/compas.datastructures.TreeNode.html" title="(in COMPAS vlatest)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code></a> object.</p>
+<dt>TypeError</dt><dd><p>If the node is not a <code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code> object.
+If the supplied parent node is not a <code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code> object.</p>
 </dd>
 <dt>ValueError</dt><dd><p>If the node is already part of another tree.
 If the supplied parent node is not part of this tree.

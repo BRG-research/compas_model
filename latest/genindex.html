@@ -500,17 +500,6 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="api/compas_model.model.html">compas_model.model</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/compas_model.elements.html">compas_model.elements</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/generated/compas_model.elements.Element.html">Element</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/compas_model.model.html">compas_model.model</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/generated/compas_model.model.ElementNode.html">ElementNode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/generated/compas_model.model.GroupNode.html">GroupNode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/generated/compas_model.model.ElementTree.html">ElementTree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/generated/compas_model.model.Model.html">Model</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="devguide.html">Development Guide</a></li>
@@ -584,9 +573,27 @@ document.write(`
         <li><a href="api/generated/compas_model.model.GroupNode.add.html#compas_model.model.GroupNode.add">(compas_model.model.GroupNode method)</a>
 </li>
       </ul></li>
+      <li><a href="api/generated/compas_model.model.ElementTree.add_element.html#compas_model.model.ElementTree.add_element">add_element() (compas_model.model.ElementTree method)</a>
+
+      <ul>
+        <li><a href="api/generated/compas_model.model.GroupNode.add_element.html#compas_model.model.GroupNode.add_element">(compas_model.model.GroupNode method)</a>
+</li>
+        <li><a href="api/generated/compas_model.model.Model.add_element.html#compas_model.model.Model.add_element">(compas_model.model.Model method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/generated/compas_model.elements.Element.axis_to_axis.html#compas_model.elements.Element.axis_to_axis">axis_to_axis() (compas_model.elements.Element method)</a>
+      <li><a href="api/generated/compas_model.model.Model.add_elements.html#compas_model.model.Model.add_elements">add_elements() (compas_model.model.Model method)</a>
+</li>
+      <li><a href="api/generated/compas_model.model.ElementTree.add_group.html#compas_model.model.ElementTree.add_group">add_group() (compas_model.model.ElementTree method)</a>
+
+      <ul>
+        <li><a href="api/generated/compas_model.model.GroupNode.add_group.html#compas_model.model.GroupNode.add_group">(compas_model.model.GroupNode method)</a>
+</li>
+        <li><a href="api/generated/compas_model.model.Model.add_group.html#compas_model.model.Model.add_group">(compas_model.model.Model method)</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/compas_model.model.Model.add_interaction.html#compas_model.model.Model.add_interaction">add_interaction() (compas_model.model.Model method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -649,8 +656,6 @@ document.write(`
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/generated/compas_model.elements.Element.frame_to_face.html#compas_model.elements.Element.frame_to_face">frame_to_face() (compas_model.elements.Element method)</a>
-</li>
       <li><a href="api/generated/compas_model.elements.Element.from_block.html#compas_model.elements.Element.from_block">from_block() (compas_model.elements.Element class method)</a>
 </li>
       <li><a href="api/generated/compas_model.elements.Element.from_data.html#compas_model.elements.Element.from_data">from_data() (compas_model.elements.Element class method)</a>
@@ -726,10 +731,6 @@ document.write(`
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/generated/compas_model.elements.Element.object_minus_object.html#compas_model.elements.Element.object_minus_object">object_minus_object() (compas_model.elements.Element method)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/generated/compas_model.elements.Element.oobb.html#compas_model.elements.Element.oobb">oobb() (compas_model.elements.Element method)</a>
 </li>
   </ul></td>
@@ -739,6 +740,16 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/generated/compas_model.model.ElementTree.print.html#compas_model.model.ElementTree.print">print() (compas_model.model.ElementTree method)</a>
+
+      <ul>
+        <li><a href="api/generated/compas_model.model.Model.print.html#compas_model.model.Model.print">(compas_model.model.Model method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/compas_model.model.Model.print_elements.html#compas_model.model.Model.print_elements">print_elements() (compas_model.model.Model method)</a>
+</li>
+      <li><a href="api/generated/compas_model.model.Model.print_interactions.html#compas_model.model.Model.print_interactions">print_interactions() (compas_model.model.Model method)</a>
 </li>
   </ul></td>
 </tr></table>
